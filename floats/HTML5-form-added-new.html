@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="css/form-css-styles.css" />
+<meta charset="utf-8">
+<title>HTML 5 form and CSS styling</title>
+</head>
+
+<body>
+<form action="/my-handling-form-page" method="post">
+
+
+ <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" pattern="[A-Za-z]+" required />
+  </div>
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required  />
+  </div>
+
+  <div>
+ 
+   <label for="reason">Reason for contacting us:</label>
+  <select id="reason" name="user_reason" required><option value="">Select a reason</option><option value="return item">Return Item</option><option value="delivery">Delivery</option><option value="discount policy">Discount Policy</option></select>
+  
+  </div>
+  
+   <div>
+  <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message" required></textarea>
+  </div>
+  <div class="button">
+    <button type="submit">Send your message</button>
+  </div>
+  <div class="button">
+    <button type="reset" class="resetBtn">Reset</button>
+  </div>
+
+</form>
+</body>
+</html>

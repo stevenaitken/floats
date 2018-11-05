@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+/* box-sizing gives an element it's specified width & height excluding padding or margin*/
+*, *:before, *:after {
+ box-sizing: border-box;
+margin:0;
+ padding:0;
+}
+/* set all padding and margin to zero */
+body{ margin:0; padding:0;font-family: 'Acme', sans-serif;
+font-family: 'Encode Sans Condensed', sans-serif;}
+/* set the width of the wrapper class to 90% of screen with max-width of 1366px */
+div.wrapper {
+ width: 100%;
+ border: 1px solid gray;
+ max-width:1366px;
+	margin:0px auto;
+}
+
+/* style header & footer elements and clear any left float */
+header, footer {
+ padding: 1em;
+ color: white;
+ background-color: black;
+ clear: left;
+ text-align: center;
+ margin:0px;
+}
+/* set width of nav to 100% with min-height value */
+nav{
+width:100%;
+min-height:25px;
+background: #B09696; 
+border-top:4px solid #fff;
+border-bottom:4px solid #fff;}
+
+/* remove bullet points from ul */
+nav ul {
+ list-style-type: none;
+}
+/* display ul horizontally */
+nav ul li{
+ display: inline;
+}
+/* remove default underline from anchor element text */
+nav ul a {
+ text-decoration: none;
+}
+/* set width to auto & overflow hidden which stops the content over flowing the footer */
+#container{
+width: auto;
+background: #C55B5C;
+overflow: hidden;
+}
+main {
+ float:left;
+ width: 50%;
+ background: #C55B5C;
+min-height: 650px;
+padding:10px;
+}
+/*  float aside element to the left (it will wrap to the side of the main element), set the width and give min-height */
+aside {
+float:left;
+width:50%;
+background:#B6D978;
+min-height:650px;
+padding:10px;
+border-left:4px solid #fff;	
+	
+}
+
+h1{font-size: 110%;}
+/* float img to left (allows text to wrap around img), set width to 50% & max-width image can scale up to at 250px*/
+
+img{
+/*float:left;*/
+width:35%;
+
+}
+
+footer{border-top:4px solid #fff}
+a:link{color:#fff;}
+a:hover{color:#CD7300;}
+	
+	/* form */
+
+input[required], input:required {
+border: 1px solid #c00;
+}
+
+form {
+	/* Just to center the form on the page */
+   /* margin: 0 auto;*/
+	width: 600px;
+	/* To see the outline of the form */
+    padding: 1em;
+	/*border: 1px solid #CCC;*/
+	border-radius: 1em;
+}
+form div + div {
+	margin-top: 1em;
+}
+label {
+	/* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+	width: 90px;
+	
+}
+input, textarea {
+	/* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
+	/* To give the same size to all text field */
+    width: 300px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+input:focus, textarea:focus {
+	/* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+/* this aligns the drop down list to its label */
+#reason{vertical-align:top; margin-top:5px;}
+
+/*#subscribe1{border:#F40A0E 1px solid;vertical-align: top;width:40px; }
+#subscribe{ vertical-align:top; }*/
+
+textarea {	
+	/* To properly align multiline text fields with their labels */
+    vertical-align: top;
+	
+	/* To give enough room to type some text */
+    height: 5em;
+	/* To allow users to resize any textarea vertically
+       It does not work on all browsers */
+    resize: vertical;
+	margin-top:10px;
+}
+.button {
+	/* To position the buttons to the same position of the text fields */
+    padding-left: 90px; /* same size as the label elements */
+	display:inline-block;
+}
+button {
+	/* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: .5em;
+}
+.resetBtn{
+	margin-left:-5em;
+	
+}
+
+
+	
+
+
+/* media queries */
+/* viewport hits 800px apply diferent style to the elements in the query */
+@media only screen and (max-width: 800px) {
+	
+	main{float:none; width: 100%;min-height: 0;}
+	aside{float:none;width: 100%;min-height: 0;}
+	nav ul li{ display: block}
+	nav{text-align: center;}
+	img{float:none;	width:100%;}
+
+	footer{border:0;}
+	aside{border:0;}	
+	div.wrapper {width: 100%;}	
+	nav{border:0;}
+	p{margin:10px 0px;}
+}
